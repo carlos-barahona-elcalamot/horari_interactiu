@@ -35,12 +35,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
 class Horari extends StatefulWidget {
   final HorariController _controller = HorariController();
 
   Horari({
     super.key,
   });
+
+  String nomDiaSetmana(DiasSemana elDia) {
+    return  const {
+      DiasSemana.dl: "dilluns",
+      DiasSemana.dt: "dimarts",
+      DiasSemana.dc: "dimecres",
+      DiasSemana.dj: "dijous",
+      DiasSemana.dv: "divendres",
+    }[elDia]!;
+  }
 
   @override
   State<Horari> createState() => _HorariState();
