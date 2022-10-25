@@ -86,7 +86,7 @@ class _HorariState extends State<Horari> {
               Expanded(
                 child: Column(
                   children: [
-                    Text(elDia.name),
+                    Text(widget.nomDiaSetmana(elDia)),
                     for (TimeOfDay laHora in widget._controller.horesClasse)
                       Expanded(
                         child: GestureDetector(
